@@ -1,0 +1,12 @@
+{
+  "name": "asean-championship-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Situs jadwal, klasemen, dan top skor ASEAN Championship (Piala AFF) 2026, datanya langsung dari ESPN API. Dibuat untuk deploy di Vercel.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}

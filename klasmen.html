@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags - Klasmen -->
+    <title>Klasmen Piala AFF 2026 | Tabel Klasemen & Peringkat Tim ASEAN Championship</title>
+    <meta name="description" content="Klasmen sementara Piala AFF 2026 (ASEAN Championship). Lihat peringkat tim, poin, selisih gol, dan statistik lengkap setiap grup. Update real-time dari ESPN API.">
+    <meta name="keywords" content="klasmen AFF 2026, tabel klasemen Piala AFF, peringkat tim ASEAN, poin AFF Championship, Grup A B C D">
+    <meta name="author" content="AFF 2026 Official">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/klasmen.html">
+    <meta property="og:title" content="Klasmen Piala AFF 2026 | Tabel Klasemen & Peringkat Tim">
+    <meta property="og:description" content="Pantau posisi tim favorit Anda di klasmen Piala AFF 2026. Data real-time, statistik mendalam, dan update otomatis.">
+    <meta property="og:image" content="https://ik.imagekit.io/udoscsqhu/393a411b-08c0-4d2f-94a2-f77f9fd65ece.png?updatedAt=1784472187361">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Piala AFF 2026">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://your-domain.com/klasmen.html">
+    <meta name="twitter:title" content="Klasmen Piala AFF 2026 | Tabel Klasemen & Peringkat Tim">
+    <meta name="twitter:description" content="Pantau posisi tim favorit Anda di klasmen Piala AFF 2026. Data real-time dan statistik lengkap.">
+    <meta name="twitter:image" content="https://ik.imagekit.io/udoscsqhu/393a411b-08c0-4d2f-94a2-f77f9fd65ece.png?updatedAt=1784472187361">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/udoscsqhu/b0136ca8-c401-4409-b3cb-6ebf5c231086.png?updatedAt=1784472187556">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/udoscsqhu/b0136ca8-c401-4409-b3cb-6ebf5c231086.png?updatedAt=1784472187556">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Enhanced Blue Theme */
+            --primary-ultra-dark: #0A1628;
+            --primary-dark: #0F2744;
+            --primary-medium: #1E3A5F;
+            --primary-blue: #2563EB;
+            --primary-bright: #3B82F6;
+            --accent-cyan: #06B6D4;
+            --accent-sky: #38BDF8;
+            
+            /* Gradients */
+            --gradient-hero: linear-gradient(135deg, #0A1628 0%, #1E3A5F 50%, #2563EB 100%);
+            --gradient-card: linear-gradient(145deg, rgba(15, 39, 68, 0.95) 0%, rgba(30, 58, 95, 0.9) 100%);
+            --gradient-button: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+            --gradient-glow: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(59, 130, 246, 0.2));
+            
+            /* Text Colors */
+            --text-white: #FFFFFF;
+            --text-light: #E2E8F0;
+            --text-muted: #94A3B8;
+            
+            /* Effects */
+            --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.3);
+            --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.4);
+            --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.5);
+            --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.3);
+            --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, var(--primary-ultra-dark) 0%, var(--primary-dark) 50%, #0F172A 100%);
+            color: var(--text-white);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-white);
+        }
+
+        .nav-logo img {
+            height: 42px;
+            width: auto;
+            filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.4));
+        }
+
+        .nav-logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-sky), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-button);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            opacity: 1;
+        }
+
+        .nav-link span,
+        .nav-link i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .nav-link.active {
+            background: var(--gradient-button);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* Hero Banner Section */
+        .hero-banner {
+            margin-top: 72px;
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            background: var(--gradient-hero);
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, 
+                rgba(10, 22, 40, 0.7) 0%, 
+                rgba(10, 22, 40, 0.4) 50%,
+                rgba(10, 22, 40, 0.9) 100%
+            );
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(59, 130, 246, 0.2));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--accent-sky);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-sky) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 650px;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Main Content Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px 40px 80px;
+        }
+
+        /* Group Tabs */
+        .group-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .group-tab {
+            padding: 14px 32px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(37, 99, 235, 0.2);
+            color: var(--text-light);
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .group-tab:hover,
+        .group-tab.active {
+            background: var(--gradient-button);
+            border-color: transparent;
+            color: var(--text-white);
+            box-shadow: var(--shadow-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Standings Table Container */
+        .standings-section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .section-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-button);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-blue);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Premium Table Styling */
+        .table-container-premium {
+            background: var(--gradient-card);
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        .standings-table thead {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(59, 130, 246, 0.15));
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .standings-table th {
+            padding: 18px 16px;
+            text-align: left;
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: var(--accent-sky);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .standings-table th.text-center {
+            text-align: center;
+        }
+
+        .standings-table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .standings-table tbody tr:hover {
+            background: rgba(37, 99, 235, 0.08);
+            transform: scale(1.01);
+        }
+
+        .standings-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .standings-table td {
+            padding: 18px 16px;
+            vertical-align: middle;
+            font-weight: 500;
+        }
+
+        .standings-table td.text-center {
+            text-align: center;
+        }
+
+        /* Rank Cell */
+        .rank-cell {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+        }
+
+        .rank-cell.top-1 {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .rank-cell.top-2 {
+            background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
+        }
+
+        .rank-cell.top-3 {
+            background: linear-gradient(135deg, #CD7F32, #B87333);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(205, 127, 50, 0.4);
+        }
+
+        .rank-cell.qualify {
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2), rgba(16, 185, 129, 0.15));
+            color: #34D399;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        /* Team Cell */
+        .team-cell {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .team-logo-large {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 6px;
+            border: 2px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .team-name-full {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-white);
+        }
+
+        .team-country-code {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Stats Cells */
+        .stat-value {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        .stat-value.positive {
+            color: #34D399;
+        }
+
+        .stat-value.negative {
+            color: #EF4444;
+        }
+
+        .points-cell {
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--accent-sky);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+            padding: 8px 16px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* Legend */
+        .legend-box {
+            background: var(--gradient-card);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .legend-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+        }
+
+        /* Auto Refresh Indicator */
+        .auto-refresh-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2), rgba(16, 185, 129, 0.15));
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            border-radius: 25px;
+            font-size: 0.87rem;
+            font-weight: 700;
+            color: #34D399;
+        }
+
+        .indicator-live {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.15)) !important;
+            border-color: rgba(239, 68, 68, 0.4) !important;
+            color: #EF4444 !important;
+            animation: pulse-live 1.5s infinite;
+        }
+
+        .indicator-error {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.15)) !important;
+            border-color: rgba(245, 158, 11, 0.4) !important;
+            color: #F59E0B !important;
+        }
+
+        @keyframes pulse-live {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Premium Footer */
+        .premium-footer {
+            background: linear-gradient(180deg, var(--primary-ultra-dark) 0%, #050D1A 100%);
+            border-top: 1px solid rgba(37, 99, 235, 0.2);
+            padding: 70px 0 30px;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-sky), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-sky);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--gradient-button);
+            border-color: transparent;
+            color: var(--text-white);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-button);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.93rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-sky);
+            transform: translateX(6px);
+        }
+
+        .footer-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-primary {
+            background: var(--gradient-button);
+            color: var(--text-white);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--accent-sky);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(37, 99, 235, 0.1);
+            border-color: var(--primary-bright);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-bottom-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--accent-sky);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 22, 40, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 8px;
+                border-bottom: 1px solid rgba(37, 99, 235, 0.2);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero-banner {
+                height: 380px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .main-container {
+                padding: 35px 20px 60px;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .group-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .group-tab {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="beranda.html" class="nav-logo">
+                <img src="https://ik.imagekit.io/udoscsqhu/b0136ca8-c401-4409-b3cb-6ebf5c231086.png?updatedAt=1784472187556" alt="AFF Logo">
+                <span class="nav-logo-text">AFF 2026</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="beranda.html" class="nav-link"><i class="fas fa-home"></i><span>Beranda</span></a></li>
+                <li><a href="jadwal.html" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Jadwal</span></a></li>
+                <li><a href="klasmen.html" class="nav-link active"><i class="fas fa-trophy"></i><span>Klasmen</span></a></li>
+                <li><a href="topscore.html" class="nav-link"><i class="fas fa-futbol"></i><span>Top Score</span></a></li>
+            </ul>
+
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Banner with Image -->
+    <section class="hero-banner">
+        <img src="https://ik.imagekit.io/udoscsqhu/55c891b5-a94d-4cc4-b0f3-b93011c80211_optimized_1000.png" alt="Klasmen AFF 2026 Banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-trophy"></i>
+                STANDINGS TABLE
+            </div>
+            <h1 class="hero-title">Klasmen<br>Piala AFF 2026</h1>
+            <p class="hero-subtitle">Pantau posisi tim favorit Anda dalam persaingan menuju gelar juara ASEAN Championship. Data real-time, statistik lengkap, dan update otomatis.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Auto Refresh Indicator -->
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 28px;">
+            <div class="auto-refresh-indicator" id="autoRefreshIndicator">
+                <i class="fas fa-sync-alt"></i>
+                <span>Memuat...</span>
+            </div>
+        </div>
+
+        <!-- Group Selection Tabs -->
+        <div class="group-tabs">
+            <!-- Tab grup di-generate dinamis oleh JS sesuai data ESPN -->
+        </div>
+
+        <!-- Standings Table Section -->
+        <section class="standings-section" id="standingsSection">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <div class="section-icon"><i class="fas fa-trophy"></i></div>
+                    <div>
+                        <h2 class="section-title">Grup A</h2>
+                        <p class="section-subtitle">Update terakhir: Real-time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container-premium">
+                <div class="table-wrapper">
+                    <table class="standings-table" id="standingsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tim</th>
+                                <th class="text-center">M</th>
+                                <th class="text-center">M</th>
+                                <th class="text-center">S</th>
+                                <th class="text-center">K</th>
+                                <th class="text-center">SG</th>
+                                <th class="text-center">Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr><td colspan="8" style="text-align:center; padding: 40px; color: var(--text-muted);"><i class="fas fa-spinner fa-spin"></i> Memuat klasemen dari ESPN...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="legend-box">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: linear-gradient(135deg, #FFD700, #FFA500);"></div>
+                    <span>Juara Grup (Lolos Semi Final)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: linear-gradient(135deg, #C0C0C0, #A8A8A8);"></div>
+                    <span>Runner-up Grup (Lolos Semi Final)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: linear-gradient(135deg, #CD7F32, #B87333);"></div>
+                    <span>Peringkat 3</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: rgba(52, 211, 153, 0.3); border: 1px solid rgba(52, 211, 153, 0.5);"></div>
+                    <span>Zona Play-off / Terdegradasi</span>
+                </div>
+                <div class="legend-item">
+                    <span style="font-weight: 600; color: var(--text-light);">M = Main | Menang | Seri | Kalah | SG = Selisih Gol | Pts = Poin</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-trophy"></i> AFF 2026</h3>
+                    <p>Platform resmi untuk mengikuti seluruh informasi Piala AFF 2026 (ASEAN Championship). Menyajikan data real-time, statistik mendalam, dan pengalaman menonton yang tak terlupakan bagi pecinta sepak bola Asia Tenggara.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="beranda.html"><i class="fas fa-home"></i> Beranda</a></li>
+                        <li><a href="jadwal.html"><i class="fas fa-calendar"></i> Jadwal Lengkap</a></li>
+                        <li><a href="klasmen.html"><i class="fas fa-trophy"></i> Klasmen</a></li>
+                        <li><a href="topscore.html"><i class="fas fa-futbol"></i> Top Score</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Informasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-info-circle"></i> Tentang Turnamen</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Peserta Tim</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Stadion</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Sejarah</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Aksi Cepat</h4>
+                    <div class="footer-cta-buttons">
+                        <a href="#" class="cta-button cta-primary">
+                            <i class="fas fa-bell"></i> Notifikasi Live
+                        </a>
+                        <a href="#" class="cta-button cta-secondary">
+                            <i class="fas fa-download"></i> Download App
+                        </a>
+                        <a href="#" class="cta-button cta-secondary">
+                            <i class="fas fa-share-alt"></i> Bagikan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2026 Piala AFF (ASEAN Football Federation). All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Shared ESPN data engine -->
+    <script src="teams.js"></script>
+    <script src="espn-api.js"></script>
+    <script src="auto-refresh.js"></script>
+
+    <script>
+        const AFF_FLAGS = {
+            'thailand': '🇹🇭', 'vietnam': '🇻🇳', 'indonesia': '🇮🇩', 'malaysia': '🇲🇾',
+            'singapore': '🇸🇬', 'philippines': '🇵🇭', 'myanmar': '🇲🇲', 'cambodia': '🇰🇭',
+            'laos': '🇱🇦', 'brunei': '🇧🇳', 'timor-leste': '🇹🇱', 'timor leste': '🇹🇱',
+        };
+        function flagFor(teamName) {
+            const key = (teamName || '').toLowerCase();
+            const found = Object.keys(AFF_FLAGS).find((k) => key.includes(k));
+            return found ? AFF_FLAGS[found] : '🏳️';
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        let standingsGroups = []; // [{groupName, teams:[...]}]
+        let activeGroupIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            startAutoRefresh(renderStandingsFromAPI, document.getElementById('autoRefreshIndicator'));
+        });
+
+        async function renderStandingsFromAPI() {
+            try {
+                const groups = await getStandings();
+                if (!groups || groups.length === 0) {
+                    showEmpty('Klasemen belum tersedia dari ESPN untuk turnamen ini.');
+                    return false;
+                }
+                standingsGroups = groups;
+                if (activeGroupIndex >= groups.length) activeGroupIndex = 0;
+                renderTabs();
+                renderTable(activeGroupIndex);
+                return false; // standings tidak butuh polling secepat skor live
+            } catch (error) {
+                console.error('Gagal memuat klasemen:', error);
+                showError('Gagal memuat data klasemen dari ESPN.');
+                return 'error';
+            }
+        }
+
+        function renderTabs() {
+            const wrap = document.querySelector('.group-tabs');
+            if (!wrap) return;
+            wrap.innerHTML = standingsGroups.map((g, i) => `
+                <button class="group-tab ${i === activeGroupIndex ? 'active' : ''}" onclick="showGroup(${i})">
+                    ${g.groupName || `Grup ${i + 1}`}
+                </button>`).join('');
+        }
+
+        function showGroup(index) {
+            activeGroupIndex = index;
+            document.querySelectorAll('.group-tab').forEach((tab, i) => tab.classList.toggle('active', i === index));
+            renderTable(index);
+        }
+
+        function renderTable(index) {
+            const group = standingsGroups[index];
+            if (!group) return;
+
+            const titleEl = document.querySelector('.section-title');
+            if (titleEl) titleEl.textContent = group.groupName || `Grup ${index + 1}`;
+
+            const tbody = document.getElementById('tableBody');
+            if (!tbody) return;
+
+            if (group.teams.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; padding: 40px; color: var(--text-muted);">Belum ada data tim untuk grup ini.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = group.teams.map((team, i) => {
+                const rank = i + 1;
+                const rankClass = rank === 1 ? 'top-1' : rank === 2 ? 'top-2' : rank === 3 ? 'top-3' : rank === 4 ? 'qualify' : '';
+                const gdVal = Number(team.goalDiff) || 0;
+                const gdClass = gdVal > 0 ? 'positive' : gdVal < 0 ? 'negative' : '';
+                const gdDisplay = gdVal > 0 ? `+${gdVal}` : `${gdVal}`;
+
+                return `
+                    <tr>
+                        <td><span class="rank-cell ${rankClass}">${rank}</span></td>
+                        <td>
+                            <div class="team-cell">
+                                ${team.logo ? `<img src="${team.logo}" alt="${team.name}" style="width:32px;height:32px;object-fit:contain;" onerror="this.replaceWith(document.createTextNode('${flagFor(team.name)}'))">` : `<span style="font-size: 2rem;">${flagFor(team.name)}</span>`}
+                                <div>
+                                    <div class="team-name-full">${team.name}</div>
+                                    <div class="team-country-code">${team.abbreviation || ''}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center stat-value">${team.played}</td>
+                        <td class="text-center stat-value positive">${team.win}</td>
+                        <td class="text-center stat-value">${team.draw}</td>
+                        <td class="text-center stat-value negative">${team.loss}</td>
+                        <td class="text-center stat-value ${gdClass}">${gdDisplay}</td>
+                        <td class="text-center"><span class="points-cell">${team.points}</span></td>
+                    </tr>`;
+            }).join('');
+        }
+
+        function showError(message) {
+            const tbody = document.getElementById('tableBody');
+            if (tbody) {
+                tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; padding: 40px; color: #EF4444;">
+                    <i class="fas fa-exclamation-circle"></i> ${message}
+                    <br><button onclick="renderStandingsFromAPI()" style="margin-top: 16px; padding: 10px 24px; background: var(--gradient-button); color: white; border: none; border-radius: 10px; font-weight: 700; cursor: pointer;">Coba Lagi</button>
+                </td></tr>`;
+            }
+        }
+
+        function showEmpty(message) {
+            const tbody = document.getElementById('tableBody');
+            if (tbody) tbody.innerHTML = `<tr><td colspan="8" style="text-align:center; padding: 40px; color: var(--text-muted);">${message}</td></tr>`;
+        }
+    </script>
+</body>
+</html>
